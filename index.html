@@ -140,8 +140,12 @@
       border-radius: 8px;
     }
 
+    /* Scroll offset fix for headings so they're visible below fixed header */
     h2 {
-      margin-top: 2rem;
+      position: relative;
+      padding-top: 230px;   /* height of fixed header */
+      margin-top: -230px;   /* negative margin equal to padding */
+      margin-bottom: 1rem;
       color: #34495e;
     }
 
