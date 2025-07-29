@@ -2,156 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lars Arntsen Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lars Arntsen | PhD Applicant</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
+      color: #2c3e50;
     }
 
     header {
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
       background-color: #fff;
-      z-index: 1000;
-      border-bottom: 1px solid #ccc;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 1em 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      padding: 0.5em;
-    }
-
-    nav a:hover {
-      color: #007acc;
-    }
-
-    .top-section {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem 2rem;
+      z-index: 999;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background-color: #f5f5f5;
-      padding: 2em;
-      border-bottom: 1px solid #ccc;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
-    .profile-pic {
-      width: 180px;
-      height: 180px;
+    header img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
-      margin-right: 2em;
+      border: 2px solid #2c3e50;
+      flex-shrink: 0;
     }
 
-    .profile-content {
+    .header-text {
       flex: 1;
     }
 
-    .name {
-      font-size: 2em;
-      font-weight: bold;
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.8rem;
     }
 
-    .contact-icons a {
-      margin-right: 1em;
-      font-size: 1.5em;
-      color: #333;
+    .tagline {
+      font-style: italic;
+      color: #555;
     }
 
-    .contact-icons a:hover {
-      color: #007acc;
+    .cv-link {
+      margin-top: 0.5rem;
+      display: inline-block;
     }
 
-    section {
-      padding: 2em;
+    .buttons {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 8px 14px;
+      background-color: #2c3e50;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #34495e;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 180px auto 2rem;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     h2 {
-      margin-top: 0;
+      margin-top: 2rem;
+      color: #34495e;
     }
 
-    .section-content {
-      max-width: 800px;
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#other">Other</a>
-    </nav>
-  </header>
-
-  <div class="top-section">
-    <img src="Headshot.jpg" alt="Lars Arntsen Headshot" class="profile-pic" />
-    <div class="profile-content">
-      <div class="name">Lars Arntsen</div>
-      <div class="contact-icons">
-        <a href="https://github.com/larspwarntsen" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
+    <img src="Headshot.jpg" alt="Lars Arntsen Headshot">
+    <div class="header-text">
+      <h1>Lars Arntsen</h1>
+      <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
+      <p>
+        Email: <a href="mailto:larspwarntsen@gmail.com">larspwarntsen@gmail.com</a> |
+        <a class="cv-link" href="CV_LarsArntsen.pdf" download>Download CV</a>
+      </p>
+      <div class="buttons">
+        <a class="button" href="https://github.com/larspwarntsen" target="_blank">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.41-2.69 5.38-5.25 5.66.41.35.76 1.04.76 2.11v3.12c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+          </svg>
+          GitHub
         </a>
-        <a href="https://www.linkedin.com/in/lars-arntsen/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
+        <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">
+          <svg class="icon" viewBox="0 0 448 512">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.84 108.1C24.1 108.1 0 83.9 0 54.4 0 24.9 24.1.7 53.84.7c29.74 0 53.44 24.2 53.44 53.7 0 29.5-23.7 53.7-53.44 53.7zm394.06 339.9h-92.4V303.6c0-34.7-12.4-58.4-43.4-58.4-23.7 0-37.8 16-44 31.4-2.3 5.4-2.8 13-2.8 20.6v150.9h-92.4s1.2-239.2 0-264h92.4v37.4c12.3-19 34.4-46.2 83.6-46.2 61 0 106.8 39.8 106.8 125.4V448z"/>
+          </svg>
+          LinkedIn
         </a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <section id="about">
+  <div class="container">
     <h2>About</h2>
-    <div class="section-content">
-      <p>I’m a biomedical engineer passionate about AI in healthcare. My recent work focuses on wearable technology, medical imaging, and deep learning for diagnostics.</p>
-    </div>
-  </section>
+    <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
+    <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
+    <p>Currently, I’m applying to PhD programs and seeking scholarships to support my graduate studies and continue developing technologies that help people live longer, healthier lives.</p>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Wearable Gait Monitor:</strong> Developed an IMU-based system to classify activity and detect sedentary behavior in older adults.</li>
-        <li><strong>Skin Lesion Classifier:</strong> Built a CNN pipeline for skin lesion segmentation and classification using ISIC data.</li>
-        <li><strong>Blood-Brain Barrier Prediction:</strong> Fine-tuned Chemformer and applied SHAP for interpretability in molecular design.</li>
-      </ul>
-    </div>
-  </section>
+    <h2>Research Projects</h2>
+    <ul>
+      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
+      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br><a href="AbstractProposal_BMES2025.pdf" download>Download PowerPoint</a></li>
+      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
+      <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
+    </ul>
 
-  <section id="experience">
-    <h2>Industry Experience</h2>
-    <div class="section-content">
-      <ul>
-        <li><strong>Clinical R&D Intern – XYZ Medical</strong>: Assisted with device validation and FDA documentation.</li>
-        <li><strong>Software Intern – AI Biotech Startup</strong>: Built internal dashboards and helped evaluate model performance.</li>
-      </ul>
-    </div>
-  </section>
+    <h2>Publications & Conference Posters</h2>
+    <ul>
+      <li>“Multimodal AI for de novo CNS Drug Design via Molecular Generation,” BMES Conference Poster, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
+      <li>“Medicalization of Extreme Sports Athletes in a Risk Regulatory Society,” Chapter, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
+    </ul>
 
-  <section id="other">
-    <h2>Other Information</h2>
-    <div class="section-content">
-      <ul>
-        <li>Worked as a camp counselor and babysitter in high school.</li>
-        <li>Waited tables during the school year to support expenses.</li>
-        <li>Founded and organized an annual charity flag football tournament.</li>
-        <li>Assisted an ed-tech startup with UI/UX and campus growth strategy.</li>
-      </ul>
-    </div>
-  </section>
+    <h2>Contact</h2>
+    <p>Feel free to reach out via email or connect using the buttons above.</p>
+  </div>
 
 </body>
 </html>
