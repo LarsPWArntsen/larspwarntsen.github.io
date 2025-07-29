@@ -10,7 +10,7 @@
     }
 
     html {
-      scroll-behavior: smooth; /* enables smooth scrolling */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -30,14 +30,15 @@
       padding: 1rem 2rem;
       z-index: 999;
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center; /* centers content horizontally */
+      gap: 1.5rem;
     }
 
     header img {
-      width: 140px;
-      height: 140px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #2c3e50;
@@ -45,8 +46,10 @@
     }
 
     .header-text {
-      flex: 1;
+      flex: 1 1 300px;
       min-width: 250px;
+      max-width: 400px;
+      text-align: center; /* center text under image */
     }
 
     .header-text h1 {
@@ -72,6 +75,7 @@
     .buttons {
       margin-top: 0.4rem;
       display: flex;
+      justify-content: center; /* center buttons */
       gap: 10px;
       flex-wrap: wrap;
     }
@@ -99,15 +103,17 @@
       fill: #ffffff;
     }
 
-    /* New navbar styles */
+    /* Centered navbar styles */
     .header-nav {
       display: flex;
+      justify-content: center;
       gap: 1.2rem;
       flex-wrap: wrap;
-      align-items: center;
       font-weight: 600;
       font-size: 1rem;
       white-space: nowrap;
+      width: 100%; /* take full width to center */
+      margin-top: 0.5rem;
     }
 
     .header-nav a {
@@ -127,7 +133,7 @@
     /* Container styling */
     .container {
       max-width: 800px;
-      margin: 180px auto 2rem;
+      margin: 230px auto 2rem; /* increased top margin for bigger header */
       padding: 2rem;
       background-color: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -155,7 +161,6 @@
     li {
       margin-bottom: 1rem;
     }
-
   </style>
 </head>
 <body>
