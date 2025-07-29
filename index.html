@@ -1,39 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Lars Arntsen | PhD Applicant</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lars Arntsen | PhD Applicant</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 1rem; line-height: 1.6; }
-    h1, h2 { color: #2c3e50; }
-    nav a { margin-right: 15px; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #2c3e50;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: #34495e;
+    }
+
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #555;
+    }
+
+    .cv-link {
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
-  <h1>Lars Arntsen</h1>
-  <p><strong>Biomedical Engineer | Researcher | Aspiring PhD Student</strong></p>
-  <p>Email: larspwarntsen@gmail.com | <a href="CV_LarsArntsen.pdf" download>Download CV</a></p>
+  <div class="container">
+    <header>
+      <img src="headshot.png" alt="Lars Arntsen Headshot">
+      <div>
+        <h1>Lars Arntsen</h1>
+        <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
+        <p>Email: <a href="mailto:larspwarntsen@gmail.com">larspwarntsen@gmail.com</a> | 
+           <a class="cv-link" href="CV_LarsArntsen.pdf" download>Download CV</a>
+        </p>
+      </div>
+    </header>
 
-  <h2>About</h2>
-  <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
-  <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
-  <p>Currently, I’m applying to PhD programs and seeking scholarships to support my graduate studies and continue developing technologies that help people live longer, healthier lives.</p>
+    <h2>About</h2>
+    <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
+    <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
+    <p>Currently, I’m applying to PhD programs and seeking scholarships to support my graduate studies and continue developing technologies that help people live longer, healthier lives.</p>
 
-  <h2>Research Projects</h2>
-  <ul>
-    <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <p><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></p></li>
-    <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.</li>
-    <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.</li>
-    <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.</li>
-  </ul>
+    <h2>Research Projects</h2>
+    <ul>
+      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
+      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.</li>
+      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.</li>
+      <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures.</li>
+    </ul>
 
-  <h2>Publications & Posters</h2>
-  <ul>
-    <li>“Multimodal AI for de novo CNS Drug Design via Molecular Generation,” BMES Conference Poster, 2025</li>
-    <li>“Medicalization of Extreme Sports Athletes in a Risk Regulatory Society,” Chapter, 2025</li>
+    <h2>Publications & Posters</h2>
+    <ul>
+      <li>“Multimodal AI for de novo CNS Drug Design via Molecular Generation,” BMES Conference Poster, 2025</li>
+      <li>“Medicalization of Extreme Sports Athletes in a Risk Regulatory Society,” Chapter, 2025</li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Feel free to reach out via email or connect on <a href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">LinkedIn</a>.</p>
+    <h2>Contact</h2>
+    <p class="contact">Feel free to reach out via email or connect on 
+      <a href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">LinkedIn</a>.
+    </p>
+  </div>
 </body>
 </html>
