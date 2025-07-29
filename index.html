@@ -129,9 +129,15 @@
       outline: none;
     }
 
+    /* Spacer to offset fixed header */
+    .spacer {
+      height: 260px; /* same height as fixed header */
+      width: 100%;
+    }
+
     .container {
       max-width: 800px;
-      margin: 0 auto 2rem; /* removed top margin */
+      margin: 0 auto 2rem; /* no top margin needed */
       padding: 2rem;
       background-color: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -139,14 +145,13 @@
     }
 
     h2 {
-     margin-top: 2rem;
-     color: #34495e;
+      margin-top: 2rem;
+      color: #34495e;
     }
 
+    /* Remove offset styling on #about */
     #about {
-      position: relative;
-      top: -260px;
-      padding-top: 260px;
+      /* no offset styles needed */
     }
 
     a {
@@ -202,8 +207,8 @@
     </nav>
   </header>
 
-  <!-- Transparent spacer for fixed header -->
-  <div style="height: 260px; width: 100%;"></div>
+  <!-- Spacer to offset fixed header -->
+  <div class="spacer"></div>
 
   <div class="container">
     <h2 id="about">About</h2>
