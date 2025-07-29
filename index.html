@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lars Arntsen | PhD Applicant</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -13,34 +17,85 @@
       color: #2c3e50;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: #ffffff;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
     header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem 2rem;
+      z-index: 999;
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      margin-bottom: 1rem;
       flex-wrap: wrap;
     }
 
     header img {
-      width: 160px;
-      height: 160px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #2c3e50;
+      flex-shrink: 0;
     }
 
-    h1 {
-      font-size: 2rem;
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
       margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #555;
+    }
+
+    .cv-link {
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+
+    .buttons {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      padding: 8px 14px;
+      background-color: #2c3e50;
+      color: #fff;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #34495e;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      fill: #ffffff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 180px auto 2rem; /* pushes down due to fixed header */
+      padding: 2rem;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     h2 {
@@ -57,75 +112,44 @@
       text-decoration: underline;
     }
 
-    .tagline {
-      font-style: italic;
-      color: #555;
+    ul {
+      padding-left: 1.25rem;
     }
 
-    .cv-link {
-      margin-top: 0.5rem;
-      display: inline-block;
-    }
-
-    .buttons {
-      margin-top: 1rem;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      padding: 10px 16px;
-      background-color: #2c3e50;
-      color: #fff;
-      border-radius: 6px;
-      font-size: 0.95rem;
-      transition: background-color 0.2s ease;
-    }
-
-    .button:hover {
-      background-color: #34495e;
-    }
-
-    .icon {
-      width: 20px;
-      height: 20px;
-      fill: #ffffff;
+    li {
+      margin-bottom: 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <img src="Headshot.jpg" alt="Lars Arntsen Headshot">
-      <div>
-        <h1>Lars Arntsen</h1>
-        <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
-        <p>
-          Email: <a href="mailto:larspwarntsen@gmail.com">larspwarntsen@gmail.com</a> |
-          <a class="cv-link" href="CV_LarsArntsen.pdf" download>Download CV</a>
-        </p>
-        <div class="buttons">
-          <a class="button" href="https://github.com/larspwarntsen" target="_blank">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.41-2.69 5.38-5.25 5.66.41.35.76 1.04.76 2.11v3.12c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
-            </svg>
-            GitHub
-          </a>
-          <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">
-            <svg class="icon" viewBox="0 0 448 512">
-              <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.1 107 0 82.6 0 53.5S24.1 0 53.84 0s53.44 24.1 53.44 53.5-24.1 53.5-53.44 53.5zM447.9 448h-92.4V302.4c0-34.7-12.4-58.4-43.4-58.4-23.7 0-37.8 16-44 31.4-2.3 5.4-2.8 13-2.8 20.6V448h-92.4s1.2-239.2 0-264h92.4v37.4c12.3-19 34.4-46.2 83.6-46.2 61 0 106.8 39.8 106.8 125.4V448z"/>
-            </svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </header>
 
+  <header>
+    <img src="Headshot.jpg" alt="Lars Arntsen Headshot">
+    <div class="header-text">
+      <h1>Lars Arntsen</h1>
+      <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
+      <p>
+        Email: <a href="mailto:larspwarntsen@gmail.com">larspwarntsen@gmail.com</a> |
+        <a class="cv-link" href="CV_LarsArntsen.pdf" download>Download CV</a>
+      </p>
+      <div class="buttons">
+        <a class="button" href="https://github.com/larspwarntsen" target="_blank">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.41-2.69 5.38-5.25 5.66.41.35.76 1.04.76 2.11v3.12c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+          </svg>
+          GitHub
+        </a>
+        <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">
+          <svg class="icon" viewBox="0 0 448 512">
+            <path d="M100.28 448H7.4V148.9h92.88zM53.84 108.1C24.1 108.1 0 83.9 0 54.4 0 24.9 24.1.7 53.84.7c29.74 0 53.44 24.2 53.44 53.7 0 29.5-23.7 53.7-53.44 53.7zm394.06 339.9h-92.4V303.6c0-34.7-12.4-58.4-43.4-58.4-23.7 0-37.8 16-44 31.4-2.3 5.4-2.8 13-2.8 20.6v150.9h-92.4s1.2-239.2 0-264h92.4v37.4c12.3-19 34.4-46.2 83.6-46.2 61 0 106.8 39.8 106.8 125.4V448z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
     <h2>About</h2>
     <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
     <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
@@ -148,5 +172,6 @@
     <h2>Contact</h2>
     <p>Feel free to reach out via email or connect using the buttons above.</p>
   </div>
+
 </body>
 </html>
