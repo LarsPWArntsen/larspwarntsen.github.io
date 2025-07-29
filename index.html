@@ -32,7 +32,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: center; /* centers content horizontally */
+      justify-content: center;
       gap: 1.5rem;
     }
 
@@ -49,7 +49,7 @@
       flex: 1 1 300px;
       min-width: 250px;
       max-width: 400px;
-      text-align: center; /* center text under image */
+      text-align: center;
     }
 
     .header-text h1 {
@@ -75,7 +75,7 @@
     .buttons {
       margin-top: 0.4rem;
       display: flex;
-      justify-content: center; /* center buttons */
+      justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
     }
@@ -103,7 +103,6 @@
       fill: #ffffff;
     }
 
-    /* Centered navbar styles */
     .header-nav {
       display: flex;
       justify-content: center;
@@ -112,7 +111,7 @@
       font-weight: 600;
       font-size: 1rem;
       white-space: nowrap;
-      width: 100%; /* take full width to center */
+      width: 100%;
       margin-top: 0.5rem;
     }
 
@@ -130,23 +129,22 @@
       outline: none;
     }
 
-    /* Container styling */
     .container {
       max-width: 800px;
-      margin: 230px auto 2rem; /* increased top margin for bigger header */
+      margin: 0 auto 2rem; /* removed top margin */
       padding: 2rem;
       background-color: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
 
-    /* Scroll offset fix for headings so they're visible below fixed header */
     h2 {
-      position: relative;
-      padding-top: 180px;   /* height of fixed header */
-      margin-top: -180px;   /* negative margin equal to padding */
-      margin-bottom: 1rem;
+      margin-top: 2rem;
       color: #34495e;
+      /* reset scroll offset styles */
+      position: static;
+      padding-top: 0;
+      margin-top: 2rem;
     }
 
     a {
@@ -201,6 +199,9 @@
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- Transparent spacer for fixed header -->
+  <div style="height: 260px; width: 100%;"></div>
 
   <div class="container">
     <h2 id="about">About</h2>
