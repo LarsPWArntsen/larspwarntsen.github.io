@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lars Arntsen | PhD Applicant</title>
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth; /* enables smooth scrolling */
     }
 
     body {
@@ -32,8 +36,8 @@
     }
 
     header img {
-      width: 180px;
-      height: 180px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #2c3e50;
@@ -42,6 +46,7 @@
 
     .header-text {
       flex: 1;
+      min-width: 250px;
     }
 
     .header-text h1 {
@@ -52,21 +57,20 @@
     .header-text p.tagline {
       font-style: italic;
       color: #555;
-      margin-bottom: 0.25rem; /* Reduced space below tagline */
+      margin-bottom: 0.25rem;
     }
 
     .header-text p:not(.tagline) {
-      margin-top: 0.15rem;    /* Reduced space above email line */
-      margin-bottom: 0.15rem; /* Optional: keep consistent spacing */
+      margin-top: 0.1rem;
+      margin-bottom: 0.1rem;
     }
 
     .cv-link {
-      /* Removed margin-top to pull closer to tagline */
       display: inline-block;
     }
 
     .buttons {
-      margin-top: 0.4rem; /* Reduced space above buttons */
+      margin-top: 0.4rem;
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
@@ -95,6 +99,32 @@
       fill: #ffffff;
     }
 
+    /* New navbar styles */
+    .header-nav {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    .header-nav a {
+      color: #2c3e50;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    .header-nav a:hover,
+    .header-nav a:focus {
+      background-color: #d6e0f0;
+      outline: none;
+    }
+
+    /* Container styling */
     .container {
       max-width: 800px;
       margin: 180px auto 2rem;
@@ -125,12 +155,13 @@
     li {
       margin-bottom: 1rem;
     }
+
   </style>
 </head>
 <body>
 
   <header>
-    <img src="Headshot.jpg" alt="Lars Arntsen Headshot">
+    <img src="Headshot.jpg" alt="Lars Arntsen Headshot" />
     <div class="header-text">
       <h1>Lars Arntsen</h1>
       <p class="tagline">Biomedical Engineer | Researcher | Aspiring PhD Student</p>
@@ -153,15 +184,22 @@
         </a>
       </div>
     </div>
+
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#research-projects">Research Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <div class="container">
-    <h2>About</h2>
+    <h2 id="about">About</h2>
     <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
     <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
     <p>Currently, I’m applying to PhD programs and seeking scholarships to support my graduate studies and continue developing technologies that help people live longer, healthier lives.</p>
 
-    <h2>Research Projects</h2>
+    <h2 id="research-projects">Research Projects</h2>
     <ul>
       <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
       <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br><a href="AbstractProposal_BMES2025.pdf" download>Download PowerPoint</a></li>
@@ -169,13 +207,13 @@
       <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
     </ul>
 
-    <h2>Publications & Conference Posters</h2>
+    <h2 id="publications">Publications & Conference Posters</h2>
     <ul>
       <li>“Multimodal AI for de novo CNS Drug Design via Molecular Generation,” BMES Conference Poster, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
       <li>“Medicalization of Extreme Sports Athletes in a Risk Regulatory Society,” Chapter, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
     </ul>
 
-    <h2>Contact</h2>
+    <h2 id="contact">Contact</h2>
     <p>Feel free to reach out via email or connect using the buttons above.</p>
   </div>
 
