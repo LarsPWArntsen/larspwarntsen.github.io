@@ -170,6 +170,33 @@
     li {
       margin-bottom: 1rem;
     }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 1rem;
+      }
+ 
+      header img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .header-text {
+        max-width: none;
+        text-align: center;
+      }
+
+      .header-nav {
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
+
+      .spacer {
+        height: 160px;
+      }
+    }
+    
   </style>
 </head>
 <body>
