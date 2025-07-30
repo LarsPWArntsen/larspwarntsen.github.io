@@ -172,19 +172,22 @@
     }
 
     /* Hide nav on mobile by default */
-    @media screen and (max-width: 600px) {
-      header {
-        position: static;
-        box-shadow: none;
+    @media screen and (max-width: 300px) {
+      .header-nav {
+        display: none;
       }
     
       .spacer {
         display: none;
       }
-    }
     
-      .header-nav.show {
-        display: flex;
+      header {
+        position: static;
+        box-shadow: none;
+      }
+    
+      body {
+        padding-top: 0;
       }
     }
     
