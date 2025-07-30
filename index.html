@@ -10,7 +10,7 @@
     }
 
     html {
-      scroll-behavior: smooth;
+      /* scroll-behavior: smooth; */ /* Removed for jQuery override */
     }
 
     body {
@@ -129,15 +129,14 @@
       outline: none;
     }
 
-    /* Spacer to offset fixed header */
     .spacer {
-      height: 220px; /* same height as fixed header */
+      height: 220px;
       width: 100%;
     }
 
     .container {
       max-width: 800px;
-      margin: 0 auto 2rem; /* no top margin needed */
+      margin: 0 auto 2rem;
       padding: 2rem;
       background-color: #ffffff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -147,11 +146,6 @@
     h2 {
       margin-top: 2rem;
       color: #34495e;
-    }
-
-    /* Remove offset styling on #about */
-    #about {
-      /* no offset styles needed */
     }
 
     a {
@@ -184,18 +178,8 @@
         <a class="cv-link" href="github_CV.pdf" download>Download CV</a>
       </p>
       <div class="buttons">
-        <a class="button" href="https://github.com/larspwarntsen" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.55v-2c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.26-1.67-1.26-1.67-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.18 1.74 1.18 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.24.72-1.52-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.3 1.18-3.11-.12-.29-.51-1.45.11-3.02 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.18-1.49 3.14-1.18 3.14-1.18.63 1.57.24 2.73.12 3.02.74.81 1.18 1.85 1.18 3.11 0 4.41-2.69 5.38-5.25 5.66.41.35.76 1.04.76 2.11v3.12c0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
-          </svg>
-          GitHub
-        </a>
-        <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank" rel="noopener noreferrer">
-          <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false">
-            <path d="M100.28 448H7.4V148.9h92.88zM53.84 108.1C24.1 108.1 0 83.9 0 54.4 0 24.9 24.1.7 53.84.7c29.74 0 53.44 24.2 53.44 53.7 0 29.5-23.7 53.7-53.44 53.7zm394.06 339.9h-92.4V303.6c0-34.7-12.4-58.4-43.4-58.4-23.7 0-37.8 16-44 31.4-2.3 5.4-2.8 13-2.8 20.6v150.9h-92.4s1.2-239.2 0-264h92.4v37.4c12.3-19 34.4-46.2 83.6-46.2 61 0 106.8 39.8 106.8 125.4V448z"/>
-          </svg>
-          LinkedIn
-        </a>
+        <a class="button" href="https://github.com/larspwarntsen" target="_blank">GitHub</a>
+        <a class="button" href="https://www.linkedin.com/in/lars-arntsen/" target="_blank">LinkedIn</a>
       </div>
     </div>
 
@@ -209,47 +193,44 @@
     </nav>
   </header>
 
-  <!-- Spacer to offset fixed header -->
   <div class="spacer"></div>
 
   <div class="container">
-    <h2 id="about">About</h2>
-    <p>I recently graduated from Rensselaer Polytechnic Institute with a B.S. in Biomedical Engineering and a minor in Healthcare Markets.</p>
-    <p>I’m passionate about translational and interdisciplinary research, particularly in developing medical devices that support personalized medicine and leverage technology to combat disease. I’m especially interested in innovations that address chronic conditions and mental health — areas where long-term solutions can significantly improve quality of life. I'm drawn to projects that span the full device pipeline, from problem identification and design to testing and iteration.</p>
-    <p>Currently, I’m applying to PhD programs and seeking scholarships to support my graduate studies and continue developing technologies that help people live longer, healthier lives.</p>
-
     <h2 id="research-experience">Research Experience</h2>
-    <ul>
-      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br><a href="AbstractProposal_BMES2025.pdf" download>Download PowerPoint</a></li>
-      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-      <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
-    </ul>
-    
+    <!-- Your content here -->
+
     <h2 id="research-projects">Research Projects</h2>
-    <ul>
-      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br><a href="AbstractProposal_BMES2025.pdf" download>Download PowerPoint</a></li>
-      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-      <li><strong>Medicalization of Extreme Sports Athletes in a Risk Regulatory Society</strong> – Analyzed how medical frameworks are used to classify and manage risk-taking behavior in athletic subcultures.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
-    </ul>
+    <!-- Your content here -->
 
     <h2 id="publications">Publications & Conference Posters</h2>
-    <ul>
-      <li>“Multimodal AI for de novo CNS Drug Design via Molecular Generation,” BMES Conference Poster, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Poster</a></li>
-      <li>“Medicalization of Extreme Sports Athletes in a Risk Regulatory Society,” Chapter, 2025<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-    </ul>
+    <!-- Your content here -->
 
     <h2 id="industry-experience">Industry Experience</h2>
-    <ul>
-      <li><strong>Multimodal AI for de novo CNS Drug Design via Molecular Generation</strong> – Developed a SMILES-based molecular generator fine-tuned with reinforcement learning and guided by multimodal property classifiers to design CNS-optimized compounds with high validity and desirable pharmacological profiles. <br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-      <li><strong>Design and Development of a Wearable Device for Gait and Sedentary Behavior Analysis</strong> – Designed a motion-tracking device with IMU + ML classifier for elder care.<br><a href="AbstractProposal_BMES2025.pdf" download>Download PowerPoint</a></li>
-      <li><strong>A Deep Learning Pipeline for Skin Lesion Segmentation and Classification</strong> – Combined CNN classification with U-Net-based segmentation to improve lesion detection.<br><a href="AbstractProposal_BMES2025.pdf" download>Download Abstract</a></li>
-    </ul>
-    
+    <!-- Your content here -->
+
     <h2 id="contact">Contact</h2>
     <p>Feel free to reach out via email or connect using the buttons above.</p>
   </div>
+
+  <!-- jQuery + Smooth Scroll Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("a[href^='#']").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          const headerHeight = $('header').outerHeight();
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - headerHeight - 10
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
