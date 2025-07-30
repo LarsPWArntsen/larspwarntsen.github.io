@@ -252,23 +252,24 @@
   </div>
   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $("a[href^='#']").on('click', function(event) {
-        if (this.hash !== "") {
-          event.preventDefault();
-          const hash = this.hash;
-          const headerHeight = $('header').outerHeight();
+<script>
+  $(document).ready(function(){
+    $("a[href^='#']").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+        const headerHeight = $('header').outerHeight();
 
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top - headerHeight - 10
-          }, 800, function(){
-            window.location.hash = hash;
-          });
-        }
-      });
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - headerHeight - 10
+        }, 800);
+
+        // Use pushState to update URL without triggering jump
+        history.pushState(null, null, hash);
+      }
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
